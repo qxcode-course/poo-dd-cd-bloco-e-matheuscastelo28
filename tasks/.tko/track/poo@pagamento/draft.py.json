@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-02_16-00-53",
+            "content": "@@ -1,433 +0,0 @@\n-from abc import ABC, abstractmethod%0A%0Aclass Pagamento:%0A    def __init__(self, valor: int, descri%C3%A7ao: str):%0A        self.valor = valor %0A        self.descri%C3%A7ao = descri%C3%A7ao%0A    %0A    def resumo(self) -%3E str:%0A        return f%22 Pagamento de R$%7Bself.valor%7D: %7Bself.descri%C3%A7ao%7D%22%0A    %0A    def validar_valor(self) -%3E None:%0A        if self.valor %3C= 0:%0A            raise ValueError (%22Falhou: valor invalido%22)%0A%0A    @abstractmethod%0A     def %0A        \n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-12-02_16-22-47",
+            "content": "@@ -1,426 +1,42 @@\n-from abc import ABC, abstractmethod%0A%0Aclass Pagamento:%0A    def __init__(self, valor: int, descri%C3%A7ao: str):%0A        self.valor = valor %0A        self.descri%C3%A7ao = descri%C3%A7ao%0A    %0A    def resumo(self) -%3E str:%0A        return f%22 Pagamento de R$%7Bself.valor%7D: %7Bself.descri%C3%A7ao%7D%22%0A    %0A    def validar_valor(self) -%3E None:%0A        if self.valor %3C= 0:%0A            raise ValueError (%22Falhou: valor invalido%22)%0A%0A    @abstractmethod%0A    def\n+@@ -416,438 +416,12 @@%0A     %0A+ %0A def%0A-\n  pro\n@@ -44,25 +44,27 @@\n essar(self):\n-%0A\n+%250A\n          pas\n@@ -64,23 +64,27 @@\n     pass\n-%0A\n+%250A\n      \n-%0A\n+%250A\n class Ca\n@@ -106,17 +106,19 @@\n amento):\n-%0A\n+%250A\n     def \n@@ -184,17 +184,22 @@\n , descri\n-%C3%A7\n+%25C3%25A7\n ao: str)\n@@ -199,17 +199,19 @@\n o: str):\n-%0A\n+%250A\n         \n@@ -244,13 +244,20 @@\n scri\n-%C3%A7ao)%0A\n+%25C3%25A7ao)%250A\n     \n@@ -274,17 +274,19 @@\n um = num\n-%0A\n+%250A\n         \n@@ -301,17 +301,19 @@\n e = nome\n-%0A\n+%250A\n         \n@@ -340,25 +340,27 @@\n  limite \n-%0A\n+%250A\n         \n %0A    def\n@@ -347,25 +347,27 @@\n  %250A        \n-%0A\n+%250A\n     def resu\n@@ -372,25 +372,27 @@\n sumo (self):\n-%0A\n+%250A\n         retu\n@@ -394,17 +394,19 @@\n  return \n-%22\n+%2522\n Cartao d\n@@ -418,9 +418,11 @@\n dito\n-%22\n+%2522\n  + s\n@@ -440,14 +440,18 @@\n mo()\n-%0A\n+%250A\n     \n-%0A\n+%250A\n     \n@@ -471,17 +471,19 @@\n e(self):\n-%0A\n+%250A\n         \n@@ -504,14 +504,13 @@\n mite\n- \n %0A  \n-      \n+%250A  %0A\n",
+            "lines": "6"
+        },
+        {
+            "label": "2025-12-02_21-23-18",
+            "content": "@@ -574,16 +574,8 @@\n tr):\n-tko open\n %0A   \n",
+            "lines": "31"
+        },
+        {
+            "label": "2025-12-08_20-20-04",
+            "content": "@@ -562,32 +562,40 @@\n descri%C3%A7ao: str):\n+tko open\n %0A        super()\n",
+            "lines": "31"
+        },
+        {
+            "label": "2025-12-08_21-44-50",
+            "content": "from abc import ABC, abstractmethod\n\nclass Pagamento:\n    def __init__(self, valor: int, descri\u00e7ao: str):\n        self.valor = valor \n        self.descri\u00e7ao = descri\u00e7ao\n    \n    def resumo(self) -> str:\n        return f\" Pagamento de R${self.valor}: {self.descri\u00e7ao}\"\n    \n    def validar_valor(self) -> None:\n        if self.valor <= 0:\n            raise ValueError (\"Falhou: valor invalido\")\n\n    @abstractmethod\n    def processar(self):\n         pass\n     \nclass CartaoCredito(Pagamento):\n    def __init__(self, num: int, nome: str, limite:float, valor:int, descri\u00e7ao: str):\n        super().__init__(valor, descri\u00e7ao)\n        self.num = num\n        self.nome = nome\n        self.limite: float = limite \n        \n    def resumo (self):\n        return \"Cartao de Credito\" + super().resumo()\n    \n    def get_limite(self):\n        return self.limite \n        ",
+            "lines": "31"
+        }
+    ]
+}

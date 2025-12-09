@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-02_15-42-13",
+            "content": "@@ -1,496 +0,0 @@\n-from abc import ABC, abstractmethod%0A%0Aclass Animal(ABC):%0A    def __init__(self,nome) -%3E None:%0A        self.nome = nome %0A        %0A    def apresenta_nome(self,nome: str):%0A        print(f%22eu sou%7Bself.nome%7D%22)%0A        %0A    %0A    abstractmethod%0A    def fazer_som(self) -%3E None: %0A        pass%0A    @abstractmethod%0A    def mover(self) -%3E None:%0A        pass%0A    %0A    def apresentar(animal:Animal):%0A        animal.fazer_som()%0A        animal.mover()%0A        animal.apresentar_nome()%0A        %0A        %0A        %0A\n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-12-09_16-07-07",
+            "content": "@@ -42,17 +42,16 @@\n s Animal\n- \n (ABC):%0A \n@@ -53,30 +53,32 @@\n C):%0A    def \n+_\n _init_\n+_\n (self,nome) \n@@ -145,25 +145,24 @@\n a_nome(self,\n- \n nome: str):%0A\n@@ -211,25 +211,24 @@\n   %0A    %0A    \n-@\n abstractmeth\n@@ -344,16 +344,20 @@\n ss%0A    %0A\n+    \n def apre\n@@ -370,17 +370,16 @@\n (animal:\n- \n Animal):\n@@ -484,273 +484,13 @@\n    %0A\n-class Leao(Animal):%0A    def _init_(self, nome: str) -%3E None:%0A        super()._init_(nome)%0A        %0A    def fazer_som(self):%0A        print(%22graaaaaaaaaam%22)%0A    def mover(self):%0A        print (%22caminhando em caminho%22)%0A    def apresenta_nome(self, nome):%0A        pass%0A    \n+        %0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2025-12-09_16-29-53",
+            "content": "@@ -751,268 +751,4 @@\n     \n-%0Aclass Urso(Animal):%0A    def _init_(self,nome:str) -%3E None:%0A        super()._init_(nome)%0A        %0A    def fazer_som(self):%0A        print(%22UUUUUU%22)%0A    def mover(self):%0A        print(%22caminhando no gelo em silencio%22)%0A    def apresenta_nome(self, nome):%0A        pass\n",
+            "lines": "34"
+        },
+        {
+            "label": "2025-12-09_16-34-28",
+            "content": "from abc import ABC, abstractmethod\n\nclass Animal (ABC):\n    def _init_(self,nome) -> None:\n        self.nome = nome \n        \n    def apresenta_nome(self, nome: str):\n        print(f\"eu sou{self.nome}\")\n        \n    \n    @abstractmethod\n    def fazer_som(self) -> None: \n        pass\n    @abstractmethod\n    def mover(self) -> None:\n        pass\n    \ndef apresentar(animal: Animal):\n        animal.fazer_som()\n        animal.mover()\n        animal.apresentar_nome()\n        \n        \nclass Leao(Animal):\n    def _init_(self, nome: str) -> None:\n        super()._init_(nome)\n        \n    def fazer_som(self):\n        print(\"graaaaaaaaaam\")\n    def mover(self):\n        print (\"caminhando em caminho\")\n    def apresenta_nome(self, nome):\n        pass\n    \nclass Urso(Animal):\n    def _init_(self,nome:str) -> None:\n        super()._init_(nome)\n        \n    def fazer_som(self):\n        print(\"UUUUUU\")\n    def mover(self):\n        print(\"caminhando no gelo em silencio\")\n    def apresenta_nome(self, nome):\n        pass",
+            "lines": "44"
+        }
+    ]
+}

@@ -46,3 +46,10 @@
 2025-12-14 23:01:37, MOVE, v:1, k:poo@estacionamento, mode:BACK
 2025-12-14 23:01:47, MOVE, v:1, k:poo@estacionamento, mode:PICK
 2025-12-14 23:01:48, MOVE, v:1, k:poo@estacionamento, mode:BACK
+2025-12-14 23:14:56, SELF, v:1, k:poo@estacionamento, rate:100, human:monitor_amigo_, iagen:nao, guide:sim, other:nao_, alone:8, study:240
+2025-12-14 23:16:10, SELF, v:1, k:poo@pagamento, rate:100, human:monitor_amigo_, iagen:gpt, guide:video, alone:9, study:260
+2025-12-14 23:16:15, MOVE, v:1, k:poo@zoo, mode:PICK
+2025-12-14 23:16:17, MOVE, v:1, k:poo@zoo, mode:BACK
+2025-12-14 23:16:42, SELF, v:1, k:poo@zoo, rate:100, human:amigo, iagen:gpt, guide:video, alone:7, study:160
+2025-12-14 23:16:45, MOVE, v:1, k:poo@zoo, mode:PICK
+2025-12-14 23:16:46, MOVE, v:1, k:poo@zoo, mode:BACK

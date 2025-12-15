@@ -19,7 +19,11 @@ expanded:
 - poo@campanha-principal
 - poo@bloco_f-herança-i
 tasks:
-  poo@estacionamento: '{rate:100}'
+  poo@zoo: '{rate:100, human:amigo, iagen:gpt, guide:video, alone:7, study:160}'
+  poo@pagamento: '{rate:100, human:monitor_amigo_, iagen:gpt, guide:video, alone:9,
+    study:260}'
+  poo@estacionamento: '{rate:100, human:monitor_amigo_, iagen:nao, guide:sim, other:nao_,
+    alone:8, study:240}'
 flags:
   quests: 0
   tracks: 0
@@ -27,4 +31,4 @@ flags:
   graph: 1
   xray: 0
 lang: py
-selected: poo@estacionamento
+selected: poo@zoo
